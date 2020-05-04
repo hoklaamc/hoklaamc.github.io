@@ -31,10 +31,12 @@ jobs:
       with:
         # Yarn command
         cmd: build
-
-    - name: Deploy
-      uses: peaceiris/actions-gh-pages@v3
+    - name: Set credentials
+      uses: fusion-engineering/setup-git-credentials@v2
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        publish_dir: ./public
-        publish_branch: master  # deploying branch
+        credentials: ${{secrets.GIT_CREDENTIALS}}
+    - name: Deploy
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        # Yarn command
+        cmd: deploy
