@@ -40,4 +40,6 @@ jobs:
         # Build directory to deploy
         build_dir: public
         # Git branch where assets will be deployed
-        target_branch: master # optional, default is gh-pages:  
+        target_branch: master # optional, default is gh-pages
+      env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
