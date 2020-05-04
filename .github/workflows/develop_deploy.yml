@@ -32,15 +32,8 @@ jobs:
         # Yarn command
         cmd: build
 
-    - name: Publish
-      uses: crazy-max/ghaction-github-pages@v1.5.1
+    - name: Deploy
+      uses: Borales/actions-yarn@v2.1.0
       with:
-        # Allow an empty commit to be created
-        allow_empty_commit: false # optional, default is true
-        # Build directory to deploy
-        build_dir: public
-        # Git branch where assets will be deployed
-        target_branch: master # optional, default is gh-pages
-        keep_history: true
-      env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        # Yarn command
+        cmd: deploy
