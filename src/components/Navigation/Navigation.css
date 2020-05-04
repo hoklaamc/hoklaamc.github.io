@@ -1,0 +1,70 @@
+ul {
+  display: flex;
+  justify-content: space-between;
+  align-items: normal;
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  display: block;
+  list-style-type: none;
+  padding: 8px;
+}
+
+
+/* underline colour change */
+
+a {
+  font-size: 24px;
+  color: #242424;
+  text-decoration: none;
+  position: relative;
+  display: block;
+}
+
+a:before {
+  content: '';
+  border-bottom: solid thin #242424;
+  position: absolute;
+  bottom: 0; left: 0;
+  width: 100%;
+}
+
+a:hover:before {
+  border-bottom: solid medium #242424;
+}
+
+a:before {
+  -webkit-transition: all 0.2s ease;
+          transition: all 0.2s ease;
+}
+
+
+/* underline appear animation */
+/* a {
+  position: relative;
+  text-decoration: none;
+}
+
+a:visited {
+  color: var(--primary-text-colour);
+}
+
+a:before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  bottom: 0;
+  left: 0;
+  background-color: #242424;
+  visibility: hidden;
+  transform: scaleX(0);
+  transition: all 0.3s ease-in-out 0s;
+}
+
+a:hover:before {
+  visibility: visible;
+  transform: scaleX(1);
+} */

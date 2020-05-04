@@ -2,42 +2,29 @@ import React from "react";
 import {
   BrowserRouter as Router,
   Switch,
-  Route,
-  Link
+  Route
 } from "react-router-dom";
 
 import Home from "./pages/Home";
+import Blog from "./pages/Blog";
+import Contact from "./pages/Contact";
 
 const App = () => {
   return (
     <Router>
-      <div>
-        <nav>
-          <ul>
-            <li>
-              <Link to="/">Home</Link>
-            </li>
-            <li>
-              <Link to="/about">About</Link>
-            </li>
-          </ul>
-        </nav>
-
-        <Switch>
-          <Route path="/about">
-            <About />
-          </Route>
-          <Route path="/">
-            <Home />
-          </Route>
-        </Switch>
-      </div>
+      <Switch>
+        <Route path="/blog">
+          <Blog />
+        </Route>
+        <Route path="/contact">
+          <Contact />
+        </Route>
+        <Route path="/">
+          <Home />
+        </Route>
+      </Switch>
     </Router>
   );
-}
-
-const About = () => {
-  return <h2>About</h2>;
 }
 
 export default App;
