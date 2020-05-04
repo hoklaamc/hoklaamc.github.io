@@ -19,14 +19,20 @@ jobs:
     steps:
     # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
     - uses: actions/checkout@v2
+      
+    - name: Install dependencies
+      uses: Borales/actions-yarn@v2.1.0
+      with:
+        # Yarn command
+        cmd: install
 
-    - name: GitHub Action for Yarn
+    - name: Build project
       uses: Borales/actions-yarn@v2.1.0
       with:
         # Yarn command
         cmd: build
 
-    - name: GitHub Pages
+    - name: Publish
       uses: crazy-max/ghaction-github-pages@v1.5.1
       with:
         # Allow an empty commit to be created
