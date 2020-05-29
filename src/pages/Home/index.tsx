@@ -1,6 +1,7 @@
 import React from "react";
 import "./Home.css";
 import Navigation from "../../components/Navigation";
+import SocialIcons from "../../components/SocialIcons";
 
 const Home = () => {
   return (
@@ -8,9 +9,10 @@ const Home = () => {
       <h1 className="name">Hok Laam Cheng</h1>
       <div className="description">
         <p>4th year Computer Science student at the University of Waterloo</p>
-        <p>Developer, musician, student</p>
+        <p>Student, developer, musician</p>
       </div>
-      <Navigation showHome={false} />
+      <SocialIcons />
+      {/* <Navigation showHome={false} /> */}
     </div>
   );
 }

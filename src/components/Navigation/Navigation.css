@@ -15,7 +15,7 @@ li {
 
 /* underline colour change */
 
-a {
+.navigation>ul>li>a {
   font-size: 24px;
   color: #242424;
   text-decoration: none;
@@ -23,7 +23,7 @@ a {
   display: block;
 }
 
-a:before {
+.navigation>ul>li>a:before {
   content: '';
   border-bottom: solid thin #242424;
   position: absolute;
@@ -31,11 +31,11 @@ a:before {
   width: 100%;
 }
 
-a:hover:before {
+.navigation>ul>li>a:hover:before {
   border-bottom: solid medium #242424;
 }
 
-a:before {
+.navigation>ul>li>a:before {
   -webkit-transition: all 0.2s ease;
           transition: all 0.2s ease;
 }

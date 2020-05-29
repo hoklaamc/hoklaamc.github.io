@@ -8,7 +8,7 @@ interface NavigationProps {
 
 const Home: React.SFC<NavigationProps> = ({ showHome }) => {
   return (
-    <nav>
+    <nav className="navigation">
       <ul>
         {showHome && (
           <li>
