@@ -5,7 +5,9 @@ html, body, #root, #root>div {
 
 body {
   margin: 0;
-  background-color: #dbdbdb;
+  /* background-color: #dbdbdb; */
+  background: rgb(193,193,193);
+  background: linear-gradient(0deg, rgba(193,193,193,1) 0%, rgba(232,232,232,1) 100%);
   min-height: 100%;
   font-family: 'IBM Plex Mono', monospace;
   -webkit-font-smoothing: antialiased;
