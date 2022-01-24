@@ -1,12 +1,17 @@
-import React from "react";
-import { SocialIcon } from 'react-social-icons';
-import "./SocialIcons.css";
+import React from 'react';
+import {SocialIcon} from 'react-social-icons';
+
+const socialUrls = [
+  'https://www.linkedin.com/in/hoklaamc',
+  'https://github.com/hoklaamc',
+  'https://www.instagram.com/musicbyhok',
+];
 
 const SocialIcons = () => (
-  <div className="icons">
-    <SocialIcon className="icon" url="https://www.linkedin.com/in/hoklaamc/" target="_blank" />
-    <SocialIcon className="icon" url="https://github.com/hoklaamc" target="_blank" />
-    <SocialIcon className="icon" url="https://www.instagram.com/musicbyhok/" target="_blank" />
+  <div className="flex justify-start gap-3">
+    {socialUrls.map((url) => (
+      <SocialIcon url={url} key={url} target="_blank" />
+    ))}
   </div>
 );
 
