@@ -11,16 +11,17 @@
     "start": "vite"
   },
   "devDependencies": {
+    "@tanstack/router-plugin": "^1.99.0",
     "@types/react": "^19.0.8",
     "@types/react-dom": "^19.0.3",
-    "@tanstack/router-plugin": "^1.99.0",
-    "@vitejs/plugin-react": "^4.3.2",
-    "vite": "^6.0.3"
+    "@vitejs/plugin-react": "^4.3.4",
+    "vite": "^6.0.11"
   },
   "dependencies": {
     "@tanstack/react-router": "^1.99.0",
     "@tanstack/router-devtools": "^1.99.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0"
-  }
+  },
+  "packageManager": "pnpm@10.1.0+sha512.c89847b0667ddab50396bbbd008a2a43cf3b581efd59cf5d9aa8923ea1fb4b8106c041d540d08acb095037594d73ebc51e1ec89ee40c88b30b8a66c0fae0ac1b"
 }
