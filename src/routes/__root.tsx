@@ -14,9 +14,8 @@ function RootComponent() {
       </div>
       <hr />
       <Outlet />
-      {!import.meta.env.PROD && (
-        <TanStackRouterDevtools position="bottom-right" />
-      )}
+
+      <TanStackRouterDevtools position="bottom-right" />
     </>
   );
 }
