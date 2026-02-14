@@ -10,7 +10,9 @@ function RootComponent() {
   return (
     <>
       <div className="px-4 flex text-lg">
-        <NavLink to="/">Home</NavLink> <NavLink to="/about">About</NavLink>
+        <NavLink to="/">Home</NavLink>
+        <NavLink to="/about">About</NavLink>
+        <NavLink to="/valentines">Valentine's</NavLink>
       </div>
       <hr />
       <Outlet />
