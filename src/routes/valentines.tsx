@@ -8,6 +8,7 @@ export const Route = createFileRoute('/valentines')({
 function ValentinesComponent() {
   const [password, setPassword] = React.useState('');
   const [isAuthenticated, setIsAuthenticated] = React.useState(false);
+  const [showHint, setShowHint] = React.useState(false);
   const correctPassword = 'Lebanese Cedar';
 
   const handlePasswordSubmit = (e: React.FormEvent) => {
@@ -121,6 +122,46 @@ function ValentinesComponent() {
               💌 Unlock Valentine's Card
             </button>
           </form>
+
+          <button
+            onClick={() => setShowHint(!showHint)}
+            style={{
+              background: 'transparent',
+              color: '#8b4d69',
+              border: '2px solid #c9a6b0',
+              padding: '8px 20px',
+              borderRadius: '20px',
+              fontSize: '1rem',
+              cursor: 'pointer',
+              marginTop: '1rem',
+              transition: 'all 0.2s',
+            }}
+            onMouseOver={(e) => {
+              e.currentTarget.style.background = '#f8f5f6'
+              e.currentTarget.style.transform = 'scale(1.02)'
+            }}
+            onMouseOut={(e) => {
+              e.currentTarget.style.background = 'transparent'
+              e.currentTarget.style.transform = 'scale(1)'
+            }}
+          >
+            💡 I need a hint
+          </button>
+
+          {showHint && (
+            <div style={{
+              marginTop: '1rem',
+              padding: '1rem',
+              background: '#f8f5f6',
+              border: '2px solid #c9a6b0',
+              borderRadius: '15px',
+              fontSize: '1.1rem',
+              color: '#8b4d69',
+              fontStyle: 'italic'
+            }}>
+              Song of Songs 5:15 📖
+            </div>
+          )}
         </div>
       </div>
     );
